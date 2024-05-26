@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saint Paul-Capital</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <header>
+            <nav>
+                <img src="images/logo.png" alt="State outline" class="logo">
+                    <div class="nav-links" id="navLinks">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sources.html">Sources</a></li>
+                    </ol>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="slider">
+                <div class="slides" style="--image: url('images/saint-paul2.jpg')" alt="Saint Paul skyline in the daytime">
+                    <div class="sliding">
+                        <h2>General Information</h2>
+                            <table id="table">
+                                <tr>
+                                    <td>Population:</td>
+                                    <td>303,820</td>
+                                </tr>
+                                <tr>
+                                    <td>Incorporated:</td>
+                                    <td>1854</td>
+                                </tr>
+                                <tr>
+                                    <td>Region:</td>
+                                    <td>Metro</td>
+                                </tr>
+                                <tr>
+                                    <td>Classification:</td>
+                                    <td>Urban</td>
+                                </tr>
+                                <tr>
+                                    <td>Average Income:</td>
+                                    <td>$39,726 (below average in Minnesota: $44,947)</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/cathedral.jpg')" alt="The Cathedral of Saint Paul">
+                    <div class="sliding">
+                        <h2>Cathedral of Saint Paul</h2>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/como.jpg')" alt="Como Park">
+                    <div class="sliding">
+                        <h2>Como Park Zoo & Conservatory</h2>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/capitol.jpg')" alt="The Capitol Building">
+                    <div class="sliding">
+                        <h2>Minnesota State Capitol</h2>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/fortsnelling.jpg')" alt="Fort Snelling Military Base">
+                    <div class="sliding">
+                        <h2>Historic Fort Snelling</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+
+        <div id="card-area2">
+            <div class="wrapper2">
+                <div class="box-area2">
+                     <div class="box2">
+                        <img alt="" src="images/minneapolis.jpg" alt="Minneaplis skyline at night">
+                        <div class="overlay">
+                            <a href="minneapolis.html">Minneapolis</a>
+                        </div>
+                    </div>
+                    <div class="box2">
+                        <img alt="" src="images/rochester.jpg" alt="Rochester skyline at night">
+                        <div class="overlay">
+                            <a href="rochester.html">Rochester</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- JavaScript for Toggle Menu -->
+    <aside>
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+            next.addEventListener('click', function(){
+                let slides = document.querySelectorAll('.slides');
+                slider.appendChild(slides[0]);
+            })
+            prev.addEventListener('click', function(){
+                let slides = document.querySelectorAll('.slides');
+                slider.prepend(slides[slides.length - 1]);
+            })
+    </script>
+    </aside>
+</body>
+</html>

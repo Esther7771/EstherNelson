@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content= "IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rochester</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <section class="header">
+        <header>
+            <nav>
+                <img src="images/logo.png" alt="State outline" class="logo">
+                    <div class="nav-links" id="navLinks">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="sources.html">Sources</a></li>
+                    </ol>
+                </div>
+            </nav>
+        </header>
+
+        <div class="container">
+            <div class="slider">
+                <div class="slides" style="--image: url('images/rochester2.jpg')" alt="Rochester skyline in the daytime">
+                    <div class="sliding">
+                        <h2>General Information</h2>
+                            <table id="table">
+                                <tr>
+                                    <td>Population:</td>
+                                    <td>122,413</td>
+                                </tr>
+                                <tr>
+                                    <td>Incorporated:</td>
+                                    <td>1858</td>
+                                </tr>
+                                <tr>
+                                    <td>Region:</td>
+                                    <td>Southeastern</td>
+                                </tr>
+                                <tr>
+                                    <td>Classification:</td>
+                                    <td>Urban</td>
+                                </tr>
+                                <tr>
+                                    <td>Average Income:</td>
+                                    <td>$47,516 (above average in Minnesota: $44,947)</td>
+                                </tr>
+                            </table>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/mayo.jpg')" alt="Mayo Medical Center">
+                    <div class="sliding">
+                        <h2>Mayo Clinic</h2>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/house.jpg')" alt="Dr. MAyo's Mansion">
+                    <div class="sliding">
+                        <h2>Mayowood Historic Home</h2>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/avalon.jpg')" alt="Avalon Music Building">
+                    <div class="sliding">
+                        <h2>Avalon Music</h2>
+                    </div>
+                </div>
+                <div class="slides" style="--image: url('images/theater.jpg')" alt="Chateau Theater">
+                    <div class="sliding">
+                        <h2>Chateau Theater</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="buttons">
+                <span class="prev"></span>
+                <span class="next"></span>
+            </div>
+        </div>
+
+        <div id="card-area2">
+            <div class="wrapper2">
+                <div class="box-area2">
+                    <div class="box2">
+                        <img alt="" src="images/saint-paul.jpg" alt="Saint Paul skyline at night">
+                        <div class="overlay">
+                            <a href="saint-paul.html">Saint Paul</a>
+                        </div>
+                    </div>
+                     <div class="box2">
+                        <img alt="" src="images/minneapolis.jpg" alt="Minneaplis skyline at night">
+                        <div class="overlay">
+                            <a href="minneapolis.html">Minneapolis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- JavaScript for Toggle Menu -->
+    <aside>
+    <script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+            next.addEventListener('click', function(){
+                let slides = document.querySelectorAll('.slides');
+                slider.appendChild(slides[0]);
+            })
+            prev.addEventListener('click', function(){
+                let slides = document.querySelectorAll('.slides');
+                slider.prepend(slides[slides.length - 1]);
+            })
+    </script>
+    </aside>
+</body>
+</html>
